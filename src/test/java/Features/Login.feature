@@ -3,6 +3,9 @@ Feature: LoginFeature
 
   Scenario: Login with correct username and password
     Given I navigate to the login page
+    And I enter the users email address as Email:admin
+    And I verify the count of my salary digits for Ps 100000
+    And I just need to see how step looks fot Cucumber-Java8
     And I enter the following for Login
       | username | password      |
       | admin    | adminpassword |
