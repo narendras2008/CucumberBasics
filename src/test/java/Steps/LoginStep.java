@@ -2,6 +2,7 @@ package Steps;
 
 
 import Base.BaseUtil;
+import Pages.LoginPage;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -32,7 +33,8 @@ public class LoginStep extends BaseUtil {
 
     @And("^I click the login button$")
     public void iClickTheLoginButton() throws Throwable {
-        base.Driver.findElement(By.name("Login")).submit();
+        LoginPage page = new LoginPage(base.Driver);
+        page.ClickLogin();
     }
 
     @Then("^I should see the userform page$")
@@ -48,17 +50,18 @@ public class LoginStep extends BaseUtil {
         //Store all the users
         users = table.asList(User.class);
 
+        LoginPage page = new LoginPage(base.Driver);
+
         for (User user : users) {
-            base.Driver.findElement(By.name("UserName")).sendKeys(user.username);
-            base.Driver.findElement(By.name("Password")).sendKeys(user.password);
+            page.Login(user.username, user.password);
         }
     }
 
-    @And("^I enter ([^\"]*) and ([^\"]*)$")
+/*    @And("^I enter ([^\"]*) and ([^\"]*)$")
     public void iEnterUsernameAndPassword(String userName, String passWord) throws Throwable {
         System.out.println("The Username is" + userName);
         System.out.println("The Password is" + passWord);
-    }
+    }*/
 
 
     public class User {
