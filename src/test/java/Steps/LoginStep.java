@@ -4,6 +4,7 @@ package Steps;
 import Base.BaseUtil;
 import Pages.LoginPage;
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -55,6 +56,11 @@ public class LoginStep extends BaseUtil {
         for (User user : users) {
             page.Login(user.username, user.password);
         }
+    }
+
+    @Then("^I should see the userform page to be wrong$")
+    public void iShouldSeeTheUserformPageToBeWrong() throws Throwable {
+        Assert.assertEquals("It's not displayed", base.Driver.findElement(By.id("sdfghj")).isDisplayed(), true);
     }
 
 /*    @And("^I enter ([^\"]*) and ([^\"]*)$")
