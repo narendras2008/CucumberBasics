@@ -1,6 +1,5 @@
 # CucumberBasics
-Basics of Cucumber in Java
-Covering the following:
+Basics of Cucumber in Java, covering the following:
  * Hooks
  * Dependency Injections
  * Arguement Transformation
