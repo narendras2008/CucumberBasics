@@ -31,8 +31,6 @@ public class Hook extends BaseUtil {
         base.Driver = new ChromeDriver();
     }
 
-    }
-
     @After
     public void TearDownTest(Scenario scenario) {
 
