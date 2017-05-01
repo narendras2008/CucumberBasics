@@ -1,9 +1,7 @@
-package Runner;
+package runner;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import org.junit.runner.RunWith;
 
 /**
  * Created by Shaju on 08/04/2017.
