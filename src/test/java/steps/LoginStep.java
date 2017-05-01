@@ -1,8 +1,8 @@
-package Steps;
+package steps;
 
 
 import Base.BaseUtil;
-import Pages.LoginPage;
+import pages.LoginPage;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
