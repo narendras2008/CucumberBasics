@@ -44,6 +44,11 @@
             </plugin>
         </plugins>
     </build>
+<properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+  </properties>
+
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
@@ -58,10 +63,7 @@
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
             <version>1.2.5</version>
-       <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-  </properties>
+       
  </dependency>
 
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java8 -->
